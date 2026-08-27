@@ -21,10 +21,11 @@ clusters are labelled as "0". If so, rename that cluster to prevent erroneous
 enrichment. "0" is a cluster label internally reserved for the background set.}
 
 \item{test_set}{Data frame or character. Either a data frame including two columns,
-"gene" and "group", or a vector of genes giving the enrichment set.}
+"gene" and "group" (e.g., causal genes for different mouse diseases), or a vector of
+genes giving the test set (e.g., mouse breast cancer genes).}
 
 \item{background_set}{Character. A vector of genes that form the background
-population for the tests.}
+population for the tests (e.g., all mouse protein coding genes).}
 
 \item{test}{Character. One of "fisher" (default) for fisher's exact test, "chi.sq"
 for the chi squared test, "hyper" for the hypergeometric test, and "conditional"
@@ -43,4 +44,31 @@ A data frame with enrichment test results.
 \description{
 Performs appropriate tests of enrichment of Seurat clusters for a specified set
 of genes.
+}
+\examples{
+# Define Background Set
+background_set <- c(paste0("gene", 1:20), "gene_causal1", "gene_causal2", "gene_causal3")
+
+# Define Markers List
+# Note: Cluster labels must avoid "0" as specified in your function documentation
+markers_list <- data.frame(gene = c("gene1", "gene2", "gene_causal1", "gene_causal2",
+                                    "gene3", "gene4", "gene5", "gene_causal1",
+                                    "gene6", "gene7", "gene8"),
+                           cluster = c(rep("Cell Type 1", 4),
+                                       rep("Cell Type 2", 4),
+                                       rep("Cell Type 3", 3)),
+                                       stringsAsFactors = FALSE)
+
+# Define Test Set
+# Data frame with 'gene' and 'group' columns
+test_set_df <- data.frame(gene = c("gene_causal1", "gene_causal2", "gene_causal3"),
+                          group = c("Disease_A", "Disease_A", "Disease_B"),
+                          stringsAsFactors = FALSE)
+
+# Example Function Call
+# One-sided (greater) Fisher's exact test with Bonferroni correction
+testSeuratClusterEnrichment(markers_list = markers_list,
+                            test_set = test_set_df,
+                            background_set = background_set)
+
 }

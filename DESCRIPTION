@@ -1,19 +1,22 @@
 Package: gRaphiaExtra
 Type: Package
-Title: An R Package for Integrating Seurat Objects into gRaphia
-Version: 0.26.8.10
+Title: An R Package for Integrating 'Seurat' Objects into 'gRaphia'
+Version: 0.26.8
 Authors@R: c(
   person("Nilabhra R", "Das", , "n.das@uq.edu.au", role = c("cre", "aut"), comment = c(ORCID = "0000-0001-8187-0080")),
   person("Kaitlyn A", "Flynn", , "k.flynn@uq.edu.au", role = "aut", comment = c(ORCID = "0000-0002-8951-7887")),
   person("John P", "Kemp", , "j.kemp2@uq.edu.au", role = "aut", comment = c(ORCID = "0000-0002-9105-2249"))
   )
-Maintainer: Nilabhra R Das <nr.das@yahoo.com>
-Description: gRaphia is an extension of the Graphia application (graphia.app/) within 
-    the R environment, providing tools for network analysis and visualisation. gRaphiaExtra 
-    provides additional functionality specifically designed for single-cell RNA-sequencing 
-    data, enabling users to seamlessly integrate and utilise existing Seurat analysis 
-    outputs in gRaphia. The package also provides supplementary functions to support 
-    and enhance gRaphia analysis.
+Maintainer: Nilabhra R Das <n.das@uq.edu.au>
+Description: 'Graphia' <https://graphia.app/> is a powerful open source visual analytics 
+    application developed to aid the interpretation of large and complex datasets. 
+    For more details, see Freeman et al. (2022) <doi:10.1371/journal.pcbi.1010310>. 
+    'gRaphia' is an extension of the 'Graphia' application  within the R environment, 
+    providing tools for network analysis and visualisation. 'gRaphiaExtra' provides 
+    additional functionality specifically designed for single-cell RNA-sequencing 
+    data, enabling users to seamlessly integrate and utilise existing 'Seurat' analysis 
+    outputs in 'gRaphia'. The package also provides supplementary functions to support 
+    and enhance the 'gRaphia' analysis framework.
 License: GPL-3
 Depends:
     R (>= 4.4.2.0)
