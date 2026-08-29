@@ -6,7 +6,7 @@ Current version: 0.26.8
 Currently under review by CRAN. Expected release in September 2026.
 
 ### Installation
-To install the package:
+To install the package from github:
 ```
 # check for remotes package
 if (!requireNamespace("remotes", quietly = TRUE)) {
