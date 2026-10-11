@@ -10,14 +10,20 @@ Mater Research Institute, The University of Queensland, Brisbane, Australia
 </div>
 
 ### Introduction
-Graphia (https://graphia.app/) is a powerful open source visual analytics application developed to aid the interpretation of large and complex datasets. For more details, see Freeman et al. (2022) (doi:10.1371/journal.pcbi.1010310). gRaphia (_unreleased_) is an extension of the Graphia application  within the R environment, providing tools for network analysis and visualisation. gRaphiaExtra provides additional functionality specifically designed for single-cell RNA-sequencing data, enabling users to seamlessly integrate and utilise existing Seurat analysis outputs in gRaphia. The package also provides supplementary functions to support and enhance the gRaphia analysis framework.
+Utilising graph-based network analysis frameworks, 'Graphia' <https://graphia.app/> is a powerful open source visual analytics application developed to aid the interpretation of large and complex datasets. For more details, see article by Freeman et al. (2022) <doi:10.1371/journal.pcbi.1010310>. 'gRaphia' is an extension of the 'Graphia' application  within the R environment, providing tools for network analysis and visualisation. 'gRaphiaExtra' provides additional functionality specifically designed for single-cell RNA-sequencing data, enabling users to seamlessly integrate and utilise existing 'Seurat' analysis outputs in 'gRaphia'. The package also provides supplementary functions to support and enhance the 'gRaphia' analysis framework.
 
-Current version: 0.26.8
+Current CRAN version: 0.26.9
 
-Currently under review by CRAN. Expected release in September 2026.
+Current GitHub version: 0.26.8
 
 ### Installation
-To install the package from github:
+To install the package from CRAN:
+```
+# install gRaphiaExtra package
+install.packages("gRaphiaExtra")
+```
+
+To install the package from GitHub:
 ```
 # check for remotes package
 if (!requireNamespace("remotes", quietly = TRUE)) {
